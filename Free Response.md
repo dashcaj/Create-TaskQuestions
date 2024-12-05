@@ -13,6 +13,25 @@
 ### Pre-FRQ Practice
 
 ## Identify the Algorithm present in the JavaScript Files. 
+``` JavaScrpt
+ function removeToDo() {
+    const specificCard = this.parentElement;
+    const specificCardText =
+      specificCard.querySelector(".to-do-card").textContent;
+
+    for (let i = 0; i < ToDoItems.length; i++) {
+      if (ToDoItems[i] === specificCardText) {
+        ToDoItems.splice(i, 1);
+        break;
+      }
+    }
+    specificCard.remove();
+  }
+}
+
+
+```
+
 ### Aspects of Algorithm
 Sequencing
 Selection 
