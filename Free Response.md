@@ -31,6 +31,33 @@
 
 
 ```
+```
+function checkAnswer(answer) {
+         let q = qa[i]
+         if (q.correct.includes(answer)) {
+            used.push("Correct")
+         }
+         else {
+            used.push("Incorrect")
+         }
+         i++
+         if (i === Number(DOMSelectors.input.value)){final(used)}
+     }
+     function final(array){
+        let a = 0
+        let b = 0
+        for (let i = 0; i < array.length; i++){
+         if (array[i].includes("Correct")) {a++}
+         if (array[i].includes("Incorrect")) {b++}}
+         clear()
+         const correct = a * 100/DOMSelectors.input.value
+         const incorrect = b * 100/DOMSelectors.input.value
+         DOMSelectors.question.insertAdjacentHTML("beforeend", `<h1>You got ${correct}% of them right and ${incorrect}% of them wrong!</h1>`)
+        }
+ }
+```
+
+
 
 ### Aspects of Algorithm
 Sequencing
@@ -46,6 +73,17 @@ Programs accept input to achieve their intended functionality. **Describe at lea
 - If there are multiple parts to this question, write the part letter with your response.
 
 ---
+
+```
+ array.forEach((inputs) => {
+    DOMSelectors.toDoList.insertAdjacentHTML(
+      "beforeend",
+      `<div class="card"><div class = "to-do-card">${inputs}</div>
+    <button type ="submit" class="remove-button" id="remove-reminder"> Remove </button>
+    </div>`
+    );
+  });
+```
 
 ### Question 2
 Refer to your Personalized Project Reference when answering this question.
